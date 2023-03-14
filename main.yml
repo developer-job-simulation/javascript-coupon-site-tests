@@ -32,16 +32,14 @@ jobs:
     needs: check_is_signed_up
     steps:
       - uses: actions/checkout@v3 # checkout main repo
+      - uses: actions/setup-node@v3 # setup node
+        with:
+          node-version: 16
+      - run: rm -rf tests # remove any user provided test dir
       - uses: actions/checkout@v3 # checkout tests repo
         with:
           repository: developer-job-simulation/javascript-coupon-site-tests
           path: tests
-      - uses: actions/setup-node@v3 # setup node
-        with:
-          node-version: 16
-      - run: ls -al
-      - run: pwd
-      - run: ls -al ..
       - name: npm install
         run: cd tests && npm i
       - name: Run Tests
