@@ -35,6 +35,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: ls -al
       - name: npm install
         run: cd .github/workflows && npm i
       - name: Run Tests
