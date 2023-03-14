@@ -20,7 +20,7 @@ test("simple test", async () => {
     resources: "usable",
   });
   await setTimeout(10); // let css load
-  assert.is(dom.window.document.querySelector("h1").innerHTML, "Coupon Code Submission Website");
+  assert.is(dom.window.document.querySelector("h1").innerHTML, "Coupon Code Submission Websites");
 });
 
 test.run();
