@@ -1,4 +1,4 @@
-name: JobSimulator.dev Test Checker
+name: JavaScript Coupon Site Test Runner by JobSimulator.Dev
 on:
   pull_request_target:
     branches: ["main"]
