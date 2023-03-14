@@ -18,6 +18,7 @@ jobs:
         run: |
           echo "USER_ID=${USER_ID}" >> $GITHUB_ENV
           echo "GH_TOKEN=${GH_TOKEN}" >> $GITHUB_ENV
+      - uses: actions/checkout@v3
       - name: Call API endpoint
         if: ${{ matrix.status == 200 }}
         run: |
